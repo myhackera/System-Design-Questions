@@ -1,0 +1,58 @@
+Scaling in DBMS is the ability to expand the capacity of a database system in order to support larger amounts or requests and/or store more data without sacrificing performance.
+
+1.) Vertical Scaling
+-------------------->>>
+
+In simple terms upgrading the capacity of a single machine or moving to a new machine with more power is called vertical scaling. You can add more powers to your machine by adding better processors, increasing RAM, or other power increasing adjustments. Vertical scaling can be easily achieved by switching from small to bigger machines but remember that this involves downtime. You can enhance the capability of your server without manipulating your code. 
+
+Advantages
+===========
+  > This approach is also referred to as the ‘scale-up‘ approach.
+  > It doesn’t require any partitioning of data and all the traffic resides on a single node with more capacity.
+  > Easy implementation.
+  > Less administrative efforts as you need to manage just one system.
+  > Application compatibility is maintained.
+  > Mostly used in small and mid-sized companies.
+  > MySQL and Amazon RDS is a good example of vertical scaling.
+  
+Drawbacks
+===========
+  > Limited Scaling.
+  > Limited potential for improving network I/O or disk I/O.
+  > Replacing the server will require downtime in this approach.
+  > Greater risk of outages and hardware failures.
+  > Finite scope of upgradeability in the future.
+  > Implementation cost is expensive.
+  
+2.) Horizontal Scaling
+----------------------->>>
+
+In horizontal scaling, we enhance the performance of the server by adding more machines to the network, sharing the processing and memory workload across multiple devices. We simply add more instances of the server to the existing pool of servers and distribute the load among these servers. In this approach, there is no need to change the capacity of the server or replace the server. Also, like vertical scaling, there is no downtime while adding more servers to the network. Most organizations choose this approach because it includes increasing I/O concurrency, reducing the load on existing nodes, and increasing disk capacity. 
+
+Advantages
+==========
+
+  > This approach is also referred to as the ‘scale-out’ approach.
+  > Horizontal scalability can be achieved with the help of a distributed file system, clustering, and load–balancing.
+  > Traffic can be managed effectively.
+  > Easier to run fault-tolerance.
+  > Easy to upgrade
+  > Instant and continuous availability.
+  > Easy to size and resize properly to your needs.
+  > Implementation cost is less expensive compared to scaling-up
+  > Google with its Gmail and YouTube, Yahoo, Facebook, eBay, Amazon, etc. are heavily utilizing horizontal scaling.
+  > Cassandra and MongoDB is a good example of horizontal scaling.
+
+Drawbacks
+=========
+
+  > Complicated architectural design
+  > High licensing fees
+  > High utility costs such (cooling and electricity)
+  > The requirement of extra networking equipment such as routers and switches.
+
+
+
+
+
+
