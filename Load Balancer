@@ -1,0 +1,29 @@
+LOAD BALANCER
+=============>>>>>
+
+When a website becomes extremely popular, the traffic on that website increases, and the load on a single server also increases. The concurrent traffic overwhelms the single server and the website becomes slower for the users. In order to meet the request of these high volumes of data and to return the correct response in a fast and reliable manner we need to scale the server. 
+This can be done by adding more servers to the network and distributing all the requests across these servers.  But….who is going to decide which request should be routed to which server…??? 
+
+The answer is…Load Balancer
+
+A load balancer works as a “traffic cop” sitting in front of your server and routing client requests across all servers. It simply distributes the set of requested operations (database write requests, cache queries) effectively across multiple servers and ensures that no single server bears too many requests that lead to degrading the overall performance of the application. A load balancer can be a physical device or a virtualized instance running on specialized hardware or a software process. 
+
+We need to discuss the two main problems with this model…
+
+Single Point of Failure: 
+If the server goes down or something happens to the server the whole application will be interrupted and it will become unavailable for the users for a certain period. It will create a bad experience for users which is unacceptable for service providers.
+
+Overloaded Servers: 
+There will be a limitation for the number of requests which a web server can handle. If the business grows and the number of requests increases the server will be overloaded. To solve the increasing number of requests we need to add a few more servers and we need to distribute the requests to the cluster of servers. 
+
+To solve the above issue and to distribute the number of requests we can add a load balancer in front of the web servers and allow our services to handle any number of requests by adding any number of web servers in the network. We can spread the request across multiple servers. For some reason, if one of the servers goes offline the service will be continued. Also, the latency on each request will go down because each server is not bottle-necked on RAM/Disk/CPU anymore.
+
+Where Are Load Balancers Typically Placed?
+--------------------------------------------
+
+  > In between the client application/user and the server
+  > In between the server and the application/job servers
+  > In between the application servers and the cache servers
+  > In between the cache servers the database servers
+  
+  
