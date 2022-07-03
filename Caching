@@ -1,0 +1,9 @@
+Caching is a short term memory that has limited space but faster and contains most recently accessed items.
+========
+= Note =
+========
+You know the benefits of the cache but that doesn’t mean you store all the information in your cache memory for faster access. You can’t do that for multiple reasons. One of the reasons is the hardware of the cache that is much more expensive than a normal database. Also, the search time will increase if you store tons of data in your cache. So in short a cache needs to have the most relevant information according to the request which is going to come in the future.
+
+Typically, web application stores data in a database. When a client requests some data, it is fetched from the database and then it is returned to the user. Reading data from the database needs network calls and I/O operation which is a time-consuming process. Cache reduces the network call to the database and it speeds up the performance of the system.
+
+In a typical web application, we can add an application server cache, an in-memory store like Redis alongside our application server. When the first time a request is made a call will have to be made to the database to process the query. This is known as a cache miss. Before giving back the result to the user, the result will be saved in the cache. When the second time a user makes the same request, the application will check your cache first to see if the result for that request is cached or not. If it is then the result will be returned from the in-memory store. This is known as a cache hit. The response time for the second time request will be a lot less than the first time. 
